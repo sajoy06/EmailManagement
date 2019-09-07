@@ -65,7 +65,19 @@
                     @endforeach
                   </div> <br> <br>
                 </div>
-               
+
+                <div class="form-group">
+                    <label>*Create Domain</label>
+                    <div>
+                        <label class="radio-inline">
+                            <input type="radio" id="domain" name="domain" value="YES" checked="true">Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="domain" name="domain" value="NO">No
+                        </label>
+                    </div>
+                </div>
+                       
 
                 <div class="form-group">
                   <label for="company">Company Name</label>

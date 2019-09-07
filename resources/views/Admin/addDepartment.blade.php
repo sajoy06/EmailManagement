@@ -23,12 +23,12 @@
 
                 <div class="form-group">
                   <label for="name">*Name</label>
-                  <input id="name" name="name" type="text" class="form-control" placeholder="Name">
+                  <input id="name" name="name" type="text" class="form-control" placeholder="Name" required>
                 </div>
 
                 <div class="form-group">
                   <label for="description">Description</label>
-                  <input id="description" name="description" type="text" class="form-control" placeholder="Description" required>
+                  <input id="description" name="description" type="text" class="form-control" placeholder="Description" >
                 </div>
                
 

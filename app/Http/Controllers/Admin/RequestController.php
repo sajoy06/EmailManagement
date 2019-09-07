@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Department;
 use App\Group;
 
+
 class RequestController extends Controller
 {
     /**
@@ -44,8 +45,10 @@ class RequestController extends Controller
      */
     public function store(Request $request)
     {
+        $r = new request();
 
-        dd($request->groups);
+        dd($request->domain);
+        //dd($request->groups);
     }
 
     /**

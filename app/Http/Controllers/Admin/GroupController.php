@@ -43,6 +43,8 @@ class GroupController extends Controller
         $gp->description = request('description');
         $gp->save();
 
+        //dd($gp->id);
+
         return redirect('/groups');
     }
 
