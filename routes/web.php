@@ -23,9 +23,15 @@
  Route::get('/', function () {return view('auth.login');});
 //Route::get('/', 'Auth\AuthController@showLoginForm');
 
+ Route::resource('requests', 'Admin\RequestController');
+ Route::resource('emails', 'Admin\EmailController');
  Route::resource('users', 'Admin\UserController');
+ Route::resource('departments', 'Admin\DepartmentController');
+ Route::resource('groups', 'Admin\GroupController');
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+ Route::get('/home', 'HomeController@index')->name('home');
 /*Route::get('/users', 'Admin\UserController@users')->name('users');
 Route::get('/users/addUser', 'Admin\UserController@addUser')->name('addUser');
 Route::post('/users', 'Admin\UserController@addUserStore')->name('addUser');

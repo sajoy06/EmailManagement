@@ -40,35 +40,112 @@
         </li>
 
         <li class="
+                  @if($segment == 'requests')
+                    active
+                  @endif
+                  "
+                  
+
+                    style="
+                          @if(Auth::user()->usertype == '0')
+                            display: none !important;
+                          @endif
+                          ">
+          <a href="/requests">
+            <i class="fa fa-id-card-o"></i> <span>Request</span>
+            
+          </a>
+        </li>
+
+        <li class="
+                  @if($segment == 'emails')
+                    active
+                  @endif
+                  ">
+          <a href="/emails">
+            <i class="fa fa-envelope-o"></i> <span>Email</span>
+            
+          </a>
+        </li>
+
+         <li class="
+                  @if($segment == ' ')
+                    active
+                  @endif
+                  ">
+          <a href="#">
+            <i class="fa fa-windows"></i> <span>Domain</span>
+            
+          </a>
+        </li>
+         <li class="
+                  @if($segment == ' ')
+                    active
+                  @endif
+                  ">
+          <a href="#">
+            <i class="fa fa-file-text"></i> <span>iNews</span>
+            
+          </a>
+        </li>
+
+
+
+
+
+        <li class="
                   @if($segment == 'users')
                     active
                   @endif
                   ">
           <a href="/users">
-            <i class="fa fa-users"></i> <span>User</span>
+            <i class="fa fa-user-circle"></i> <span>User</span>
             
           </a>
         </li>
 
+        
+
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>Charts</span>
+            <i class="fa fa-cogs"></i>
+            <span>Settings</span>
             <span class="pull-right-container">
+              
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+            
+            <li class="
+                  @if($segment == 'departments')
+                    active
+                  @endif
+                  ">
+              <a href="/departments">
+                <i class="fa fa-users"></i> <span>Departments</span>
+                
+              </a>
+            </li>
+
+            <li class="
+                  @if($segment == 'groups')
+                    active
+                  @endif
+                  ">
+              <a href="/groups">
+                <i class="fa fa-object-group"></i> <span>Groups</span>
+                
+              </a>
+            </li>
+
+
             <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
             <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
             <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
           </ul>
         </li>
-
-
-
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+      
         <li class="header">LABELS</li>
         <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
