@@ -28,6 +28,7 @@
  Route::resource('users', 'Admin\UserController');
  Route::resource('departments', 'Admin\DepartmentController');
  Route::resource('groups', 'Admin\GroupController');
+ Route::resource('aliases', 'Admin\AliasController');
 
 
 

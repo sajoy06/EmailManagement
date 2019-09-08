@@ -52,14 +52,26 @@
                 </div>
 
                 <div class="form-group">
+                  <label>*Group</label>
+                  <select class="form-control" id ="group" name ="group">
+                        <option value="0">Select a Group</option>
+                    @foreach($gps as $gp)
+                        <option value="{{$gp->id}}">{{$gp->name}}</option>
+                    @endforeach
+                  </select>
+                </div>
+
+
+
+                <div class="form-group">
                   <label>*Alies</label>
 
                   <div class="form-group">
-                    @foreach($gps as $gp)
+                    @foreach($als as $al)
                         <div class="col-sm-3">
                         <label>
-                          <input type="checkbox"  name="groups[]" value="{{$gp->id}}"/>  
-                          {{$gp->name}}
+                          <input type="checkbox"  name="aliases[]" value="{{$al->id}}"/>  
+                          {{$al->name}}
                         </label>
                         </div>
                     @endforeach

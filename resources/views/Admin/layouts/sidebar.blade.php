@@ -138,17 +138,24 @@
                 
               </a>
             </li>
+            <li class="
+                  @if($segment == 'aliases')
+                    active
+                  @endif
+                  ">
+              <a href="/aliases">
+                <i class="fa fa-object-group"></i> <span>Alias</span>
+                
+              </a>
+            </li>
 
 
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+            
           </ul>
         </li>
       
         <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+        
         <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
       </ul>
     </section>

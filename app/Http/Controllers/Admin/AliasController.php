@@ -4,12 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Department;
-use App\Group;
-use App\Alias;
+Use App\Alias;
 
-
-class RequestController extends Controller
+class AliasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +15,8 @@ class RequestController extends Controller
      */
     public function index()
     {
-        //$arr['groups'] = Group::all();
-        //return view('Admin.groups')->with($arr);
-
-        return view('Admin.request');
+        $arr['aliases'] = Alias::all();
+        return view('Admin.alias')->with($arr);
     }
 
     /**
@@ -31,12 +26,7 @@ class RequestController extends Controller
      */
     public function create()
     {
-
-        $depts = Department::all();
-        $gps = Group::all();
-        $als = Alias::all();
-
-        return view('Admin.newRequest' , array('depts' =>$depts , 'gps' => $gps, 'als' => $als));
+        return view('Admin.addAlias');
     }
 
     /**
@@ -47,10 +37,15 @@ class RequestController extends Controller
      */
     public function store(Request $request)
     {
-        $r = new request();
+        $alias = new Alias();
 
-        dd($request->domain);
-        //dd($request->groups);
+        $alias->name = request('name');
+        $alias->description = request('description');
+        $alias->save();
+
+        //dd($gp->id);
+
+        return redirect('/aliases');
     }
 
     /**

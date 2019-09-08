@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add New Group
+        Add New Alies
         
       </h1>
 
@@ -17,7 +17,7 @@
             
             <!-- /.box-header -->
             <!-- form start -->
-            <form method="POST" action="/groups">
+            <form method="POST" action="/aliases">
               {{csrf_Field()}}
               <div class="box-body">
 
